@@ -1,0 +1,64 @@
+body {
+  background: rgb(156, 224, 169);
+  background: radial-gradient(
+    circle,
+    rgba(156, 224, 169, 1) 24%,
+    rgba(150, 156, 228, 1) 93%
+  );
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  padding: 10px;
+}
+
+li {
+  margin: 15px 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background: rgb(150, 156, 228);
+  background: linear-gradient(
+    0deg,
+    rgba(150, 156, 228, 1) 41%,
+    rgba(156, 224, 169, 1) 100%
+  );
+  color: white;
+}
+
+.active {
+  color: white;
+}
+
+p {
+  margin: 0 20px;
+}
+
+a[href*="github"] {
+  color: #333;
+}
+
+a[href*="github"]:hover {
+  color: #6cc644;
+}
+
+a[href*="linkedin"] {
+  color: #0077b5;
+}
+
+a[href*="linkedin"]:hover {
+  color: #005582;
+}
