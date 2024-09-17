@@ -5,6 +5,10 @@ body {
     rgba(156, 224, 169, 1) 24%,
     rgba(150, 156, 228, 1) 93%
   );
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 ul {
@@ -44,7 +48,7 @@ a:hover {
 }
 
 p {
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 
 a[href*="github"] {
@@ -61,4 +65,25 @@ a[href*="linkedin"] {
 
 a[href*="linkedin"]:hover {
   color: #005582;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  flex-grow: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 1px;
 }

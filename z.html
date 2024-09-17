@@ -3,32 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Table Example</title>
+    <link rel="stylesheet" href="./css/lab-2.css" />
+    <title>Home - About Us</title>
     <style>
-      table,
-      th,
-      td {
-        border: 0.4px solid black;
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      table {
+        flex-grow: 1;
+      }
+      footer {
+        text-align: center;
+        margin-top: auto;
+        padding: 10px;
+        background-color: #f1f1f1;
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <table width="100%">
+    <table border="1" width="100%">
       <tr>
-        <td colspan="3" align="center">
-          <h2>Welcome to My Website</h2>
+        <td colspan="2" align="center">
+          <h1>Welcome to My Website</h1>
         </td>
       </tr>
       <tr>
-        <td>Row 1, Cell 1</td>
-        <td>Row 1, Cell 2</td>
-        <td>Row 1, Cell 3</td>
-      </tr>
-      <tr>
-        <td>Row 2, Cell 1</td>
-        <td>Row 2, Cell 2</td>
-        <td>Row 2, Cell 3</td>
+        <td width="20%" valign="top">
+          <ul>
+            <li><a class="active" href="lab-2.html">About Me</a></li>
+            <li><a href="lab-2-my_family.html">My Family</a></li>
+            <li><a href="lab-2-friends.html">Friends</a></li>
+            <li><a href="lab-2-contact.html">Contact</a></li>
+          </ul>
+        </td>
+        <td width="80%">
+          <h2>Home</h2>
+          <p>Сайн уу! Миний нэр Лхагвадорж</p>
+          <p>Программ хангамжын инженер мэргэжилтэй</p>
+        </td>
       </tr>
     </table>
+    <footer>
+      <hr />
+      <p>&copy; 2024 My Portfolio Website</p>
+    </footer>
   </body>
 </html>
