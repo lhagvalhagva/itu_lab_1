@@ -1,87 +1,307 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
+  background-color: #f0f2f5;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+/* HEADER-=-=-=-=-=-=-=-=-=-=*/
 
 header {
-  display: flex;
-  justify-content: flex-end;
   background-color: #4267b2;
-  padding: 0 100px;
-  flex-direction: column;
-  align-items: flex-end;
-}
-header img {
-  position: fixed;
-  left: 0;
-  width: 50px;
-  height: auto;
-}
-header h1 {
-  color: #7da0e6;
-}
-h1 {
-  margin: 0;
-  font-size: 24px;
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 50px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  color: white;
+  padding: 20px;
+  display: flex;
   justify-content: center;
-  padding: 10px;
-}
-
-li {
-  margin: 15px 15px;
-}
-
-header a {
-  text-decoration: none;
-  color: white;
-  font-family: "Arial", sans-serif;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-a {
-  text-decoration: none;
-  color: #4267b2;
-  font-family: "Arial", sans-serif;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  padding-top: 5px;
-  padding-bottom: 1px;
-}
-
-button {
-  background-color: #5a8aea;
-  width: 50px;
-  height: 30px;
-}
-
-button p {
-  color: white;
   align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li a i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+search {
+  margin-right: 10px;
+}
+
+header search input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+header search input:focus {
+  border-color: #4267b2;
+  box-shadow: 0 0 10px rgba(66, 103, 178, 0.5);
+}
+/*MAIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+main {
+  display: flex;
+  padding-top: 20px;
+  height: calc(100vh - 100px);
+}
+
+/*SIDEBAR*/
+.sidebar {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 20vw;
+  margin: 0;
+  height: 100%;
+  overflow: scroll;
+  background-color: #f0f2f5;
+}
+
+.sidebar.left {
+  background-color: #f0f2f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.sidebar.left ul.menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar.left ul.menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar.left ul.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+}
+
+.sidebar.left ul.menu li a:hover {
+  background-color: #c8cacf;
+}
+
+.sidebar-divider {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.group-list {
+  list-style: none;
+  padding: 0;
+}
+
+.group-list li {
+  margin-bottom: 10px;
+}
+
+.group-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+}
+
+.group-list li a:hover {
+  background-color: #c8cacf;
+}
+
+/*SECTION-=-=-=-=-=-=-=-=-=-=*/
+section {
+  flex-grow: 1;
+  overflow: scroll;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f0f2f5;
+  width: 60vw;
+}
+
+article {
+  background-color: #f0f2f5;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f2f5;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: calc(33.33% - 10px);
+  margin: 5px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: 10px;
+  color: #666;
+}
+.post-section {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  white-space: nowrap;
+}
+.new-post-section {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  white-space: nowrap;
+}
+/* STORY-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+.story-section {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.story {
+  display: inline-block;
+  background-color: #f0f2f5;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  width: 120px;
+  height: 150px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.story-man {
+  border: 3px solid #4267b2;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 10px;
+  color: #4267b2;
+  background-color: white;
+}
+
+.story img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.story-section img {
+  margin: 0;
+  border-radius: 50%;
+}
+
+ul li a {
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  color: black;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a:hover {
+  color: black;
+}
+
+/*CHAT LIST*/
+.chat-list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.chat-list h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.chat-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chat-list ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.chat-list ul li img.chat-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.chat-list ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.chat-list ul li a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+footer {
+  background-color: #4267b2;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
 }
