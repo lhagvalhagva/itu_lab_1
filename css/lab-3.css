@@ -59,14 +59,14 @@ header search input:focus {
   border-color: #4267b2;
   box-shadow: 0 0 10px rgba(66, 103, 178, 0.5);
 }
-/*MAIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*MAIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -=-=-=*/
 main {
   display: flex;
   padding-top: 20px;
   height: calc(100vh - 100px);
 }
 
-/*SIDEBAR*/
+/*SIDEBAR-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .sidebar {
   padding: 20px;
   border-radius: 10px;
@@ -140,7 +140,7 @@ main {
   background-color: #c8cacf;
 }
 
-/*SECTION-=-=-=-=-=-=-=-=-=-=*/
+/*SECTION-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -=-=-=-=-= -=-=-=-=*/
 section {
   flex-grow: 1;
   overflow: scroll;
@@ -197,8 +197,9 @@ figcaption {
   margin-top: 0px;
   white-space: nowrap;
 }
-/* STORY-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-.story-section {
+
+/* STORY-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -=-=-=-=-=*/
+.story-container {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
@@ -225,6 +226,7 @@ figcaption {
   border-radius: 50%;
   padding: 10px;
   font-size: 10px;
+  overflow-x: auto;
   color: #4267b2;
   background-color: white;
 }
@@ -253,7 +255,7 @@ ul li a:hover {
   color: black;
 }
 
-/*CHAT LIST*/
+/*CHAT-LIST-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -=-=-=-=-=-=-= */
 .chat-list {
   background-color: white;
   padding: 20px;
@@ -295,7 +297,7 @@ ul li a:hover {
   text-decoration: underline;
 }
 
-/* FOOTER-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* FOOTER-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= =-=-= */
 footer {
   background-color: #4267b2;
   color: white;
@@ -304,4 +306,9 @@ footer {
   position: relative;
   width: 100%;
   bottom: 0;
+}
+
+figure {
+  background-color: white;
+  padding: 10px;
 }
