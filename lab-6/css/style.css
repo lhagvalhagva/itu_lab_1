@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Styles */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 auto;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-center h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.menu-item i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.hero {
+  height: 80vh; /* өндрийг дэлгэцийн өндөртэй тэнцүү болгов */
+  background-image: url("/images/Men_SS25_PRECOLL_WW_HP_PUSH_20241025_DI3.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.hero-content {
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 500; /* нарийн үсгийн жин */
+}
+
+.hero-content p {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Featured Products */
+.featured-products {
+  padding: 60px 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 багана */
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.product-item {
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-item p {
+  color: #333;
+  font-size: 19px;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  padding: 60px 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+.sub-hero {
+  padding: 40px;
+}
+
+.sub-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto); /* 2 мөр болгов */
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sub-hero-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.sub-hero-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sub-hero-content {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.sub-hero-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.sub-hero-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.sub-hero-button:hover {
+  background-color: #fff;
+  color: #000;
+}

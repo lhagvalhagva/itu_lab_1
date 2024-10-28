@@ -1,0 +1,139 @@
+/* Large Devices (Desktops & Laptops) */
+@media (max-width: 1200px) {
+  .product-grid,
+  .sub-hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+
+  .main-nav {
+    padding: 10px 40px;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 20px;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+  .main-nav {
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  .nav-center {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-center h1 {
+    font-size: 24px;
+  }
+
+  /* Hide default menu items on mobile */
+  .nav-left {
+    display: none;
+  }
+
+  /* Show only search and menu icons on right */
+  .nav-right {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    gap: 15px;
+  }
+
+  .nav-right .menu-item span {
+    display: none; /* Hide text, show only icons */
+  }
+
+  .nav-right .menu-item i {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .hero-content h2 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .product-grid,
+  .sub-hero-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+/* Small Devices (Mobile phones) */
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 10px;
+  }
+
+  .nav-center h1 {
+    font-size: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .cta-button,
+  .sub-hero-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .sub-hero-content h3 {
+    font-size: 20px;
+  }
+
+  .product-item p {
+    font-size: 16px;
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-section ul li a {
+    font-size: 14px;
+  }
+
+  .main-nav {
+    padding: 8px 15px;
+  }
+
+  .nav-right {
+    top: 12px;
+    right: 15px;
+  }
+
+  .nav-right .menu-item i {
+    font-size: 18px;
+  }
+}
+
+/* Height-based Media Queries */
+@media (max-height: 600px) {
+  .hero {
+    height: auto;
+    min-height: 400px;
+  }
+}
