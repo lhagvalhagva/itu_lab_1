@@ -8,7 +8,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Navigation Styles */
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -42,7 +41,7 @@ body {
 }
 
 .hero {
-  height: 80vh; /* өндрийг дэлгэцийн өндөртэй тэнцүү болгов */
+  height: 80vh;
   background-image: url("/images/Men_SS25_PRECOLL_WW_HP_PUSH_20241025_DI3.webp");
   background-size: cover;
   background-position: center;
@@ -63,7 +62,7 @@ body {
   font-size: 48px;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  font-weight: 500; /* нарийн үсгийн жин */
+  font-weight: 500;
 }
 
 .hero-content p {
@@ -88,14 +87,13 @@ body {
   color: #000;
 }
 
-/* Featured Products */
 .featured-products {
   padding: 60px 40px;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 багана */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   max-width: 1440px;
   margin: 0 auto;
@@ -117,57 +115,6 @@ body {
   font-size: 19px;
 }
 
-/* Footer */
-footer {
-  background-color: #f5f5f5;
-  padding: 60px 40px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-section h4 {
-  margin-bottom: 20px;
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  text-decoration: none;
-  color: #666;
-  font-size: 14px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .main-nav {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-left,
-  .nav-right {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-}
-
 .sub-hero {
   padding: 40px;
 }
@@ -175,7 +122,7 @@ footer {
 .sub-hero-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto); /* 2 мөр болгов */
+  grid-template-rows: repeat(2, auto);
   gap: 20px;
   max-width: 1440px;
   margin: 0 auto;
@@ -222,4 +169,34 @@ footer {
 .sub-hero-button:hover {
   background-color: #fff;
   color: #000;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 60px 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
 }
