@@ -42,7 +42,7 @@ body {
 
 .hero {
   height: 80vh;
-  background-image: url("/images/Men_SS25_PRECOLL_WW_HP_PUSH_20241025_DI3.webp");
+  background-image: url("../images/Men_SS25_PRECOLL_WW_HP_PUSH_20241025_DI3.webp");
   background-size: cover;
   background-position: center;
   display: flex;
