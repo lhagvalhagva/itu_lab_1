@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAB-8</title>
+  </head>
+  <style>
+    .task {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    input {
+      margin: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+  <body>
+    <div class="task">
+      <h3>1. Палиндром шалгах</h3>
+      <p>
+        1. Гараас өгсөн тооны цифрүүдийн нийлбэр нь палимдром мөн эсэхийг шалга
+      </p>
+      <input type="number" id="palindromeInput" />
+      <button onclick="checkPalindrome()">Шалгах</button>
+      <p id="palindromeResult"></p>
+    </div>
+    <div class="task">
+      <h3>2. Чоно, туулай</h3>
+      <p>
+        2. Чоно 25 км/ц хурдтай, туулай 18 км/ц хурдтай. Гараас өгсөн зайтай
+        байхад хэдэн минут хэдэн секундын дараа гэхэд гүйцэх вэ
+      </p>
+      <input type="number" id="distanceInput" placeholder="Зай (км)" />
+      <button onclick="calculateCatch()">Тооцоолох</button>
+      <p id="catchResult"></p>
+    </div>
+    <div class="task">
+      <h3>3. Байшингийн тоот</h3>
+      <p>
+        3. Байшин 9 давхар, 3 орцтой, давхартаа 4 айлтай бол гараас өгсөн тоот
+        нь хэддүгээр орцны хэддүгээр давхарын хэд дэх хаалга вэ
+      </p>
+      <input type="number" id="apartmentInput" placeholder="Тоот" />
+      <button onclick="findApartment()">Хайх</button>
+      <p id="apartmentResult"></p>
+    </div>
+    <div class="task">
+      <h3>4. Хамгийн бага ерөнхий хуваагдагч</h3>
+      <p>4. Array-д өгөгдсөн 5 тооны хамгийн бага ерөнхий хуваагдагчийг ол</p>
+      <input
+        type="text"
+        id="numbersInput"
+        placeholder="5 тоо (таслалаар тусгаарлах)"
+      />
+      <button onclick="findGCD()">Олох</button>
+      <p id="gcdResult"></p>
+    </div>
+    <div class="task">
+      <h3>5. 2 зэрэг, язгуур</h3>
+      <p>
+        5. Вэб сайтруу өглөө ороход гараас өгсөн тооны 2 зэрэгийг, орой ороход
+        гараас өгсөн тооны язгуурыг ол.
+      </p>
+      <input type="number" id="powerInput" placeholder="Тоо" />
+      <button onclick="calculatePower()">Тооцоолох</button>
+      <p id="powerResult"></p>
+    </div>
+
+    <script>
+      // 1. Палиндром шалгах
+      function checkPalindrome() {
+        const num = document.getElementById("palindromeInput").value;
+        let original = parseInt(num);
+        let reversed = 0;
+        let temp = original;
+
+        // Тоог урвуулах
+        while (temp > 0) {
+          reversed = reversed * 10 + (temp % 10);
+          temp = Math.floor(temp / 10);
+        }
+
+        const isPalindrome = original === reversed;
+        document.getElementById("palindromeResult").textContent = `${num} нь ${
+          isPalindrome ? "палиндром тоо мөн" : "палиндром тоо биш"
+        }`;
+      }
+      //   function checkPalindrome() {
+      //     const num = document.getElementById("palindromeInput").value;
+      //     const isPalindrome = num === num.split("").reverse().join("");
+      //     document.getElementById("palindromeResult").textContent = `${num} нь ${
+      //       isPalindrome ? "палиндром тоо мөн" : "палиндром тоо биш"
+      //     }`;
+      //   }
+
+      // 2. Чоно, туулай
+      function calculateCatch() {
+        const distance = parseFloat(
+          document.getElementById("distanceInput").value
+        );
+        const speedDiff = 25 - 18; // км/ц
+        const hours = distance / speedDiff;
+        const minutes = Math.floor(hours * 60);
+        const seconds = Math.floor((hours * 3600) % 60);
+        document.getElementById(
+          "catchResult"
+        ).textContent = `${minutes} минут ${seconds} секундын дараа гүйцнэ`;
+      }
+
+      // 3. Байшингийн тоот
+      function findApartment() {
+        const apartmentNumber = parseInt(
+          document.getElementById("apartmentInput").value
+        );
+        const apartmentsPerFloor = 4;
+        const floors = 9;
+        const entrances = 3;
+
+        const totalApartmentsPerEntrance = floors * apartmentsPerFloor;
+        const entrance = Math.ceil(
+          apartmentNumber / totalApartmentsPerEntrance
+        );
+        const remainingApts =
+          apartmentNumber - (entrance - 1) * totalApartmentsPerEntrance;
+        const floor = Math.ceil(remainingApts / apartmentsPerFloor);
+        const doorNumber = remainingApts - (floor - 1) * apartmentsPerFloor;
+
+        document.getElementById(
+          "apartmentResult"
+        ).textContent = `${entrance}-р орц, ${floor}-р давхар, ${doorNumber}-р хаалга`;
+      }
+
+      // 4. Хамгийн бага ерөнхий хуваагдагч
+      //   function gcd(a, b) {
+      //     while (a !== b) {
+      //       if (a > b) {
+      //         a = a - b;
+      //       } else {
+      //         b = b - a;
+      //       }
+      //     }
+      //     return a;
+      //   }
+      function gcd(a, b) {
+        ХИЕХ;
+        return b === 0 ? a : gcd(b, a % b);
+      }
+
+      function lcm(a, b) {
+        ХБЕХ;
+        return (a * b) / gcd(a, b);
+      }
+
+      function findLCM() {
+        const numbers = document
+          .getElementById("numbersInput")
+          .value.split(",")
+          .map((n) => parseInt(n.trim()));
+
+        let result = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+          result = lcm(result, numbers[i]);
+        }
+
+        document.getElementById(
+          "lcmResult"
+        ).textContent = `Хамгийн бага ерөнхий хуваагдагч: ${result}`;
+      }
+
+      // 5. Тооны зэрэг/язгуур
+      function calculatePowerRoot() {
+        const num = parseFloat(document.getElementById("powerInput").value);
+        const hour = new Date().getHours();
+        let result;
+
+        if (hour < 12) {
+          result = Math.pow(num, 2);
+          document.getElementById(
+            "powerRootResult"
+          ).textContent = `Өглөө учир ${num}-ийн квадрат: ${result}`;
+        } else {
+          result = Math.sqrt(num);
+          document.getElementById(
+            "powerRootResult"
+          ).textContent = `Орой учир ${num}-ийн язгуур: ${result}`;
+        }
+      }
+    </script>
+  </body>
+</html>
