@@ -57,13 +57,13 @@
         id="numbersInput"
         placeholder="5 тоо (таслалаар тусгаарлах)"
       />
-      <button onclick="findGCD()">Олох</button>
-      <p id="gcdResult"></p>
+      <button onclick="findLCM()">Олох</button>
+      <p id="lcmResult"></p>
     </div>
     <div class="task">
       <h3>5. 2 зэрэг, язгуур</h3>
       <p>
-        5. Вэб сайтруу өглөө орохо�� гараас өгсөн тооны 2 зэрэгийг, орой ороход
+        5. Вэб сайтруу өглөө орохо гараас өгсөн тооны 2 зэрэгийг, орой ороход
         гараас өгсөн тооны язгуурыг ол.
       </p>
       <input type="number" id="powerInput" placeholder="Тоо" />
@@ -72,38 +72,35 @@
     </div>
 
     <script>
-      // 1. Палиндром шалгах
       function checkPalindrome() {
         const num = document.getElementById("palindromeInput").value;
-        let original = parseInt(num);
-        let reversed = 0;
-        let temp = original;
 
-        // Тоог урвуулах
+        let sum = 0;
+        for (let i = 0; i < num.length; i++) {
+          sum += parseInt(num[i]);
+        }
+
+        let temp = sum;
+        let reversed = 0;
         while (temp > 0) {
           reversed = reversed * 10 + (temp % 10);
           temp = Math.floor(temp / 10);
         }
+        const isPalindrome = sum === reversed;
 
-        const isPalindrome = original === reversed;
-        document.getElementById("palindromeResult").textContent = `${num} нь ${
-          isPalindrome ? "палиндром тоо мөн" : "палиндром тоо биш"
+        document.getElementById(
+          "palindromeResult"
+        ).textContent = `Цифрүүдийн нийлбэр ${sum} учир${
+          isPalindrome ? "палиндром мөн" : "палиндром биш"
         }`;
       }
-      //   function checkPalindrome() {
-      //     const num = document.getElementById("palindromeInput").value;
-      //     const isPalindrome = num === num.split("").reverse().join("");
-      //     document.getElementById("palindromeResult").textContent = `${num} нь ${
-      //       isPalindrome ? "палиндром тоо мөн" : "палиндром тоо биш"
-      //     }`;
-      //   }
 
       // 2. Чоно, туулай
       function calculateCatch() {
         const distance = parseFloat(
           document.getElementById("distanceInput").value
         );
-        const speedDiff = 25 - 18; // км/ц
+        const speedDiff = 25 - 18;
         const hours = distance / speedDiff;
         const minutes = Math.floor(hours * 60);
         const seconds = Math.floor((hours * 3600) % 60);
@@ -141,12 +138,10 @@
       //     return a;
       //   }
       function gcd(a, b) {
-        ХИЕХ;
         return b === 0 ? a : gcd(b, a % b);
       }
 
       function lcm(a, b) {
-        ХБЕХ;
         return (a * b) / gcd(a, b);
       }
 
@@ -167,7 +162,7 @@
       }
 
       // 5. Тооны зэрэг/язгуур
-      function calculatePowerRoot() {
+      function calculatePower() {
         const num = parseFloat(document.getElementById("powerInput").value);
         const hour = new Date().getHours();
         let result;
@@ -175,12 +170,12 @@
         if (hour < 12) {
           result = Math.pow(num, 2);
           document.getElementById(
-            "powerRootResult"
+            "powerResult"
           ).textContent = `Өглөө учир ${num}-ийн квадрат: ${result}`;
         } else {
           result = Math.sqrt(num);
           document.getElementById(
-            "powerRootResult"
+            "powerResult"
           ).textContent = `Орой учир ${num}-ийн язгуур: ${result}`;
         }
       }
