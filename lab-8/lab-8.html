@@ -116,16 +116,12 @@
       function findApartment() {
         const num = parseInt(document.getElementById("apartmentInput").value);
 
-        // Нэг орцонд 36 айл (9 давхар * 4 айл)
         const orts = Math.ceil(num / 36);
 
-        // Үлдсэн тоотууд
         const uldsen = num - (orts - 1) * 36;
 
-        // Давхар = үлдсэн тоот / 4 айл
         const davhar = Math.ceil(uldsen / 4);
 
-        // Хаалга = үлдсэн тоот - ((давхар-1) * 4)
         const haalga = uldsen - (davhar - 1) * 4;
 
         document.getElementById(
