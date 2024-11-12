@@ -63,7 +63,7 @@
     <div class="task">
       <h3>5. 2 зэрэг, язгуур</h3>
       <p>
-        5. Вэб сайтруу өглөө ороход гараас өгсөн тооны 2 зэрэгийг, орой ороход
+        5. Вэб сайтруу өглөө орохо�� гараас өгсөн тооны 2 зэрэгийг, орой ороход
         гараас өгсөн тооны язгуурыг ол.
       </p>
       <input type="number" id="powerInput" placeholder="Тоо" />
@@ -114,25 +114,23 @@
 
       // 3. Байшингийн тоот
       function findApartment() {
-        const apartmentNumber = parseInt(
-          document.getElementById("apartmentInput").value
-        );
-        const apartmentsPerFloor = 4;
-        const floors = 9;
-        const entrances = 3;
+        const num = parseInt(document.getElementById("apartmentInput").value);
 
-        const totalApartmentsPerEntrance = floors * apartmentsPerFloor;
-        const entrance = Math.ceil(
-          apartmentNumber / totalApartmentsPerEntrance
-        );
-        const remainingApts =
-          apartmentNumber - (entrance - 1) * totalApartmentsPerEntrance;
-        const floor = Math.ceil(remainingApts / apartmentsPerFloor);
-        const doorNumber = remainingApts - (floor - 1) * apartmentsPerFloor;
+        // Нэг орцонд 36 айл (9 давхар * 4 айл)
+        const orts = Math.ceil(num / 36);
+
+        // Үлдсэн тоотууд
+        const uldsen = num - (orts - 1) * 36;
+
+        // Давхар = үлдсэн тоот / 4 айл
+        const davhar = Math.ceil(uldsen / 4);
+
+        // Хаалга = үлдсэн тоот - ((давхар-1) * 4)
+        const haalga = uldsen - (davhar - 1) * 4;
 
         document.getElementById(
           "apartmentResult"
-        ).textContent = `${entrance}-р орц, ${floor}-р давхар, ${doorNumber}-р хаалга`;
+        ).textContent = `${orts}-р орц, ${davhar}-р давхар, ${haalga}-р хаалга`;
       }
 
       // 4. Хамгийн бага ерөнхий хуваагдагч
