@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      canvas {
+        border: 2px solid #000;
+      }
+      .controls {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      Өнгө: <input type="color" id="colorPicker" /> Зузаан:
+      <input type="range" id="lineWidth" min="1" max="50" value="5" />
+    </div>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+    <script>
+      const canvas = document.getElementById("drawingCanvas");
+      const ctx = canvas.getContext("2d");
+      const colorPicker = document.getElementById("colorPicker");
+      const lineWidthInput = document.getElementById("lineWidth");
+
+      let isDrawing = false;
+      let X = 0;
+      let Y = 0;
+
+      // Зурах функц
+      function draw(e) {
+        if (!isDrawing) return;
+
+        ctx.strokeStyle = colorPicker.value;
+        ctx.lineWidth = lineWidthInput.value;
+
+        ctx.beginPath();
+        //ctx.moveTo(X, Y);
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+
+        [X, Y] = [e.offsetX, e.offsetY];
+      }
+
+      canvas.addEventListener("mousedown", (e) => {
+        isDrawing = true;
+        [X, Y] = [e.offsetX, e.offsetY];
+      });
+
+      canvas.addEventListener("mousemove", draw);
+
+      canvas.addEventListener("mouseup", () => (isDrawing = false));
+      canvas.addEventListener("mouseout", () => (isDrawing = false));
+    </script>
+  </body>
+</html>
